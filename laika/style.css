@@ -1,0 +1,454 @@
+#map {
+    height: 100vh;
+    width: 800px;
+    float: right;
+  }
+
+.map-container {
+    padding-top: 0;
+}
+
+#ufo-data {
+    display: none;
+}
+
+.details {
+    text-align: left;
+}
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+body{
+	background:url(../images/stars.png);
+	width: 100%;
+}
+
+.nav-wrapper {
+	font-family: 'Gugi', cursive;
+	background-color: #6300cc; /*white*/
+	border-bottom: 1px solid white;
+}
+
+nav ul a {
+   color: white;
+   font-size:22px; 
+}
+
+nav {
+	position: fixed;
+	z-index: 3;
+	
+}
+nav ul {
+	text-align: center;
+}
+nav ul li a:hover {
+   color: #E54ED0;
+}
+
+.right{
+	
+}
+
+
+.active{
+	color: #48008B;
+}
+
+.side-nav {
+    position: fixed;
+    width: 300px;
+    left: 0;
+    top: 0;
+    margin: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    height: 100%;
+    height: calc(100% + 60px);
+    height: -moz-calc(100%);
+    padding-bottom: 60px;
+    background-color: #fff;
+	color: #E54ED0;
+    z-index: 999;
+    overflow-y: auto;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+}
+
+p{
+	font-family: 'ABeeZee', sans-serif;
+	color: white;
+	font-size: 18px;
+}
+
+a{
+	color: #000761;
+}
+
+h4, h5{
+	font-family: 'Gugi', cursive;
+	color: #2196f3;
+	font-size: 25px;	
+}
+
+h4{
+	text-align: center;
+}
+
+a:hover {
+   color: #44008B;
+}
+
+.page-footer{
+	font-family: 'Gugi', cursive;
+	position: absolute;
+	bottom: 0;
+	
+	overflow: hidden;
+	border-top: 1px solid white;
+	width: 100%;	
+}
+
+nav .brand-logo {
+    margin-left: 15px;
+	width: 150px;
+	margin-top: -5px;	
+}
+
+/* foreground (balloons/landscape)*/
+div#parallax-bg-1{
+	position: fixed;
+	width: 1200px;
+	top: 0;
+	left: 50%; 
+	margin-left: -600px; 
+	z-index: -1;
+}
+/* background middle layer*/
+div#parallax-bg-2{
+	position: fixed;
+	width: 1200px;
+	top: 0;
+	left: 50%; 
+	margin-left: -600px; 
+	z-index: -2;
+}
+/* background layer */
+div#parallax-bg-3{
+	position: fixed;
+	width: 960px;
+	top: 0;
+	left: 50%; 
+	margin-left: -470px; 
+	z-index: -3;
+}
+
+
+span p{
+	color: black;
+}
+/* foreground */
+/*div#parallax-bg-3 div{
+	background-repeat:no-repeat;
+	position:absolute;
+	display:block;
+	overflow:hidden;
+}
+div#bg-3-1{
+	background:url('http://schulzmarcel.de/x/drafts/parallax/img/balloon.png');
+	width:529px;
+	height:757px;
+	top:-100px;
+	right:100px;
+}
+div#bg-3-2{
+	background:url('http://schulzmarcel.de/x/drafts/parallax/img/balloon2.png');
+	width:603px;
+	height:583px;
+	top:1050px;
+	right:70px;
+}
+div#bg-3-3{
+	background:url('http://schulzmarcel.de/x/drafts/parallax/img/balloon3.png');
+	width:446px;
+	height:713px;
+	top:1800px;
+	right:140px;
+}
+div#bg-3-4{
+	background:url('http://schulzmarcel.de/x/drafts/parallax/img/ground.png');
+	width:1104px;
+	height:684px;
+	top:2800px;
+	right:0px;
+}*/
+/* middle layer clouds */
+div#parallax-bg-2 div{
+	background-repeat:no-repeat;
+	position:absolute;
+	display:block;
+	width:488px;
+	height:150px;
+	overflow:hidden;
+}
+
+div#bg-2-1{
+	background-image:url(../images/mercury.png);
+	top:100px;
+	left:-110px;
+}
+div#bg-2-2{
+	background:url(../images/venus.png);
+	top:25px;
+	right:-450px;
+}
+div#bg-2-3{
+	background:url(../images/earth.png);
+	top:470px;
+	left:1000px;
+}
+div#bg-2-4{
+	background:url(../images/mars.png);
+	top:750px;
+	left:1300px;
+}
+div#bg-2-5{
+	background:url(../images/jupiter.png);
+	top:620px;
+	left:-185px;
+}
+div#bg-2-6{
+	background:url(../images/saturn.png);
+	top:820px;
+	left:340px;
+}
+div#bg-2-7{
+	background:url(../images/uranus.png);
+	top:1150px;
+	left:50px;
+}
+div#bg-2-8{
+	background:url(../images/neptune.png);
+	top:900px;
+	left:850px;
+}
+
+/*background layer clouds */
+div#parallax-bg-1 div{
+	background-repeat:no-repeat;
+	position:absolute;
+	display:block;
+	width:488px;
+	height:150px;
+	overflow:hidden;
+}
+div#bg-1-1{
+	background-image:url(../images/mercury.png);
+	top:500px;
+	right:-500px;
+}
+div#bg-1-2{
+	background:url(../images/venus.png);
+	top:425px;
+	left:25px;
+}
+div#bg-1-3{
+	background:url(../images/earth.png);
+	top:870px;
+	right:90px;
+}
+div#bg-1-4{
+	background:url(../images/mars.png);
+	top:950px;
+	left:350px;
+}
+div#bg-1-5{
+	background:url(../images/jupiter.png);
+	top:200px;
+	left:450px;
+}
+div#bg-1-6{
+	background:url(../images/saturn.png);
+	top:400px;
+	left:650px;
+}
+div#bg-1-7{
+	background:url(../images/uranus.png);
+	top:800px;
+	left:350px;
+}
+div#bg-1-8{
+	background:url(../images/neptune.png);
+	top:1000px;
+	left:850px;
+}
+
+/*************HOME PAGE SLIDER*********************/
+.slider .indicators .indicator-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 3px solid #000761;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: white;
+}
+
+.slider {
+   width: 640px;
+   max-width: 80%;
+   margin: auto;  
+}
+.slider .indicators {
+  bottom: 60px;
+  z-index: 2;
+  /* text-align: left; */
+}
+
+.slider .slides li .caption {
+    color: white;
+	font-family: 'Gugi', cursive;
+}
+
+
+/**********************BUTTONS HOME PAGE******************/
+
+.wrap {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button {
+
+  display: inline-block;
+  margin: 0.3em;
+  padding: 1.2em 5em;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  border: none; 
+  font-size: 15px;
+  text-align: center;
+}
+
+.button:hover {
+  box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
+  color: none;
+}
+
+
+
+
+/********************************TO TOP BUTTON *************/
+#button {
+  display: inline-block;
+  background-color: #E54ED0;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: white;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #44008B;
+  text-decoration: none;
+}
+#button:active {
+  background-color: #44008B;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/***********************LEARN PAGE**************/
+h1#learn-heading {
+    margin-top: 150px;
+	   font-family: 'Gugi', cursive;
+    color: white;
+    font-size: 6em;
+}
+
+.left-align {
+    text-align: left;
+}
+.white-text {
+    color: #fff !important;
+}
+
+
+h5#subhead {
+	color: #2196f3;
+	font-family: 'Gugi', cursive;
+    font-size: 1.64rem;
+    line-height: 110%;
+    margin: 1.0933333333rem 0 .656rem 0;
+}
+
+
+.learn1 {
+    border-style: solid;
+    border-color: #2196f3;
+    border-width: 10px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+.learn2 {
+    border-style: solid;
+    border-color: #9F45B0;
+    border-width: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+.left {
+    float: left !important;
+}
+
+.card-panel {
+    border-radius: 30px;
+    padding: 50px;
+}
